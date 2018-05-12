@@ -160,24 +160,20 @@ storiesOf('FitText', module)
   .add(
     'with children in fixed sizes',
     withInfo('More info')(() => {
-      let Example = props => (
-        <FitText compressor={2}>
-          <div>
-            <h1>Baskerville’s Characteristicks</h1>
-            <p>
-              Working from multiple masters allows type designers to provide
-              graphic designers with a wider range of styles through separate
-              fonts. What if the range between those extremes were available to
-              manipulate at runtime on screens, allowing a typeface to respond
-              to its context?
-            </p>
-          </div>
-        </FitText>
-      )
-
       return (
         <MultiWrapper widths={[100, 500, 1000]}>
-          <Example />
+          <FitText compressor={2}>
+            <div>
+              <h1>Baskerville’s Characteristicks</h1>
+              <p>
+                Working from multiple masters allows type designers to provide
+                graphic designers with a wider range of styles through separate
+                fonts. What if the range between those extremes were available
+                to manipulate at runtime on screens, allowing a typeface to
+                respond to its context?
+              </p>
+            </div>
+          </FitText>
         </MultiWrapper>
       )
     })
