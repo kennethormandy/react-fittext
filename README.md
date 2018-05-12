@@ -75,5 +75,5 @@ I’ve used various versions of this project in the following type specimen site
 
 [The MIT License (MIT)](LICENSE.md)
 
-Copyright © 2014 [Sergio Rafael Gianazza](https://github.com/gianu/react-fittext/blob/master/LICENSE)
+Copyright © 2014 [Sergio Rafael Gianazza](https://github.com/gianu/react-fittext/blob/master/LICENSE)<br/>
 Copyright © 2017–2018 [Kenneth Ormandy Inc.](http://kennethormandy.com)
