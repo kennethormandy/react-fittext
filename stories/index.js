@@ -75,6 +75,41 @@ let demoText = [
   'Liberté',
 ]
 
+const MultiWrapper = props => {
+  return (
+    <React.Fragment>
+      {props.widths.map((w, index) => {
+        let width = `${w}px`
+        return (
+          <div
+            style={{
+              position: 'relative',
+              width: width,
+              border: '1px dashed silver',
+              marginBottom: padding,
+            }}>
+            <span
+              style={{
+                position: 'absolute',
+                top: 0,
+                fontSize: '10px',
+                background: 'silver',
+                color: 'black',
+                display: 'inline-block',
+                margin: 0,
+                lineHeight: '1',
+                padding: '0.25rem',
+              }}>
+              {width}
+            </span>
+            <div>{props.children}</div>
+          </div>
+        )
+      })}
+    </React.Fragment>
+  )
+}
+
 storiesOf('FitText', module)
   .add(
     'Welcome',
@@ -93,6 +128,33 @@ storiesOf('FitText', module)
     ))
   )
   .add(
-    'with text',
-    withInfo('More info')(() => <FitText value="The quick brown fox…" />)
+    'with a text string',
+    withInfo('More info')(() => (
+      <FitText compressor={2}>The Quick Brown Fox</FitText>
+    ))
+  )
+  .add(
+    'with children in fixed sizes',
+    withInfo('More info')(() => {
+      let Example = props => (
+        <FitText compressor={2}>
+          <div>
+            <h1>Baskerville’s Characteristicks</h1>
+            <p>
+              Working from multiple masters allows type designers to provide
+              graphic designers with a wider range of styles through separate
+              fonts. What if the range between those extremes were available to
+              manipulate at runtime on screens, allowing a typeface to respond
+              to its context?
+            </p>
+          </div>
+        </FitText>
+      )
+
+      return (
+        <MultiWrapper widths={[100, 500, 1000]}>
+          <Example />
+        </MultiWrapper>
+      )
+    })
   )
