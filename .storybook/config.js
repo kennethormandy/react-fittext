@@ -7,7 +7,7 @@ setOptions({
    * name to display in the top left corner
    * @type {String}
    */
-  name: 'React FontVariations',
+  name: 'React FitText',
   /**
    * URL for name in top left corner to link to
    * @type {String}
