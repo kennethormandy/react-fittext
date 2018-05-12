@@ -80,8 +80,10 @@ const MultiWrapper = props => {
     <React.Fragment>
       {props.widths.map((w, index) => {
         let width = `${w}px`
+        let keyStr = `MultiWrapper_${index}`
         return (
           <div
+            key={keyStr}
             style={{
               position: 'relative',
               width: width,
