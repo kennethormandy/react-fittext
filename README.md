@@ -24,11 +24,13 @@ import FitText from '@kennethormandy/react-fittext'
 
 With Fragments:
 
+```jsx
 <FitText>
   <React.Fragment>
     The quick brown fox jumps over the lazy dog
   </React.Fragment>
 </FitText>
+```
 
 ## Running locally
 
