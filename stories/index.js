@@ -195,3 +195,70 @@ storiesOf('FitText', module)
       )
     })
   )
+  .add(
+    'with border image slice',
+    withInfo('More info')(() => {
+      return (
+        <div
+          style={{
+            textAlign: 'center',
+            color: 'orange',
+            padding: '10px',
+            border: '30px solid',
+            borderImage: `url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png)`,
+            borderImageSlice: `44`,
+          }}>
+          <FitText compressor={0.5}>hello</FitText>
+        </div>
+      )
+    })
+  )
+  .add(
+    'with missing word-break',
+    withInfo('More info')(() => {
+      return (
+        <div>
+          <div style={{ marginBottom: padding }}>
+            <div>default</div>
+            <div
+              style={{
+                border: '1px solid',
+              }}>
+              <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
+            </div>
+          </div>
+          <div style={{ marginBottom: padding }}>
+            <div>break-word</div>
+            <div
+              style={{
+                wordBreak: 'break-word',
+                border: '1px solid',
+              }}>
+              <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
+            </div>
+          </div>
+          <div style={{ marginBottom: padding }}>
+            <div>break-word, hyphens</div>
+            <div
+              style={{
+                wordBreak: 'break-word',
+                hyphens: 'auto',
+                border: '1px solid',
+              }}>
+              <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
+            </div>
+          </div>
+          <div style={{ marginBottom: padding }}>
+            <div>break-all</div>
+            <div
+              style={{
+                wordBreak: 'break-all',
+                border: '1px solid',
+              }}>
+              <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
+            </div>
+          </div>
+        </div>
+      )
+    })
+  )
