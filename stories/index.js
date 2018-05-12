@@ -182,3 +182,33 @@ storiesOf('FitText', module)
       )
     })
   )
+  .add(
+    'with minFontSize',
+    withInfo('More info')(() => {
+      return (
+        <MultiWrapper widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
+          <FitText compressor={5} minFontSize={12}>
+            <p>
+              Minimum. Working from multiple masters allows type designers to
+              provide graphic designers with a wider range of styles through
+              separate fonts. What if the range between those extremes were
+              available to manipulate at runtime on screens, allowing a typeface
+              to respond to its context?
+            </p>
+          </FitText>
+        </MultiWrapper>
+      )
+    })
+  )
+  .add(
+    'with maxFontSize',
+    withInfo('More info')(() => {
+      return (
+        <MultiWrapper widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
+          <FitText compressor={0.5} maxFontSize={200}>
+            Maximum
+          </FitText>
+        </MultiWrapper>
+      )
+    })
+  )
