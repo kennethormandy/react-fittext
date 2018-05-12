@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,800');
+
+body {
+  /* `serif` fallback, so it’s obvious if it isn’t working */
+  font-family: "Work Sans", serif;
+  font-weight: 600;
+  margin: 0;
+}

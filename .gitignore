@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+
+# Logs
+logs
+*.log*
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
+fonts
+*.woff
+*.woff2
+*.ttf
+*.otf
+
+# TODO
+stories/todo
+
+# Compile directories
+www/
+build/
+lib/
+dist/
