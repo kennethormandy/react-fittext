@@ -34,7 +34,7 @@ With Fragments:
 
 ## Running locally
 
-```
+```sh
 git clone https://github.com/kennethormandy/react-fittext
 cd kennethormandy
 
