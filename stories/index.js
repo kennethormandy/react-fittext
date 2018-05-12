@@ -4,6 +4,8 @@ import { action } from '@storybook/addon-actions'
 import { setDefaults, withInfo } from '@storybook/addon-info'
 
 import FitText from '../src/FitText'
+import CycleValue from './components/CycleValue'
+import MultiWidth from './components/MultiWidth'
 import './story-fonts.css'
 
 let padding = '5vw'
@@ -75,43 +77,6 @@ let demoText = [
   'Liberté',
 ]
 
-const MultiWrapper = props => {
-  return (
-    <React.Fragment>
-      {props.widths.map((w, index) => {
-        let width = `${w}px`
-        let keyStr = `MultiWrapper_${index}`
-        return (
-          <div
-            key={keyStr}
-            style={{
-              position: 'relative',
-              width: width,
-              border: '1px dashed silver',
-              marginBottom: padding,
-            }}>
-            <span
-              style={{
-                position: 'absolute',
-                top: 0,
-                fontSize: '10px',
-                background: 'silver',
-                color: 'black',
-                display: 'inline-block',
-                margin: 0,
-                lineHeight: '1',
-                padding: '0.25rem',
-              }}>
-              {width}
-            </span>
-            <div>{props.children}</div>
-          </div>
-        )
-      })}
-    </React.Fragment>
-  )
-}
-
 storiesOf('FitText', module)
   .add(
     'Welcome',
@@ -161,7 +126,7 @@ storiesOf('FitText', module)
     'with children in fixed sizes',
     withInfo('More info')(() => {
       return (
-        <MultiWrapper widths={[100, 500, 1000]}>
+        <MultiWidth widths={[100, 500, 1000]}>
           <FitText compressor={2}>
             <div>
               <h1>Baskerville’s Characteristicks</h1>
@@ -174,7 +139,7 @@ storiesOf('FitText', module)
               </p>
             </div>
           </FitText>
-        </MultiWrapper>
+        </MultiWidth>
       )
     })
   )
@@ -182,7 +147,7 @@ storiesOf('FitText', module)
     'with minFontSize',
     withInfo('More info')(() => {
       return (
-        <MultiWrapper widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
+        <MultiWidth widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
           <FitText compressor={5} minFontSize={12}>
             <p>
               Minimum. Working from multiple masters allows type designers to
@@ -192,7 +157,7 @@ storiesOf('FitText', module)
               to respond to its context?
             </p>
           </FitText>
-        </MultiWrapper>
+        </MultiWidth>
       )
     })
   )
@@ -200,11 +165,23 @@ storiesOf('FitText', module)
     'with maxFontSize',
     withInfo('More info')(() => {
       return (
-        <MultiWrapper widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
+        <MultiWidth widths={[100, 300, 600, 700, 900, 1000, 2000, 3000]}>
           <FitText compressor={0.5} maxFontSize={200}>
             Maximum
           </FitText>
-        </MultiWrapper>
+        </MultiWidth>
+      )
+    })
+  )
+  .add(
+    'with changing content',
+    withInfo('More info')(() => {
+      return (
+        <MultiWidth>
+          <FitText compressor={5}>
+            <CycleValue />
+          </FitText>
+        </MultiWidth>
       )
     })
   )
