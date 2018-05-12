@@ -91,7 +91,7 @@ FitText.defaultProps = {
 }
 
 FitText.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   compressor: PropTypes.number,
   debounce: PropTypes.number,
   minFontSize: PropTypes.number,
