@@ -185,3 +185,13 @@ storiesOf('FitText', module)
       )
     })
   )
+  .add(
+    'with custom debounce timeout',
+    withInfo('More info')(() => {
+      return (
+        <FitText compressor={1} debounce={1000}>
+          hello
+        </FitText>
+      )
+    })
+  )
