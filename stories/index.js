@@ -136,6 +136,28 @@ storiesOf('FitText', module)
     ))
   )
   .add(
+    'with line breaks',
+    withInfo('More info')(() => {
+      let style = {
+        textAlign: 'center',
+        fontWeight: 200,
+        marginBottom: padding,
+      }
+      return (
+        <div>
+          <FitText compressor={1.2}>
+            <div style={style}>
+              ABCDEFGHIJKLMN<br />OPQRSTUVWXYZ
+            </div>
+          </FitText>
+          <FitText compressor={1.2}>
+            <div style={style}>{`ABCDEFGHIJKLMN\nOPQRSTUVWXYZ`}</div>
+          </FitText>
+        </div>
+      )
+    })
+  )
+  .add(
     'with children in fixed sizes',
     withInfo('More info')(() => {
       let Example = props => (
