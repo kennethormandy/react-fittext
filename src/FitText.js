@@ -69,7 +69,7 @@ class FitText extends React.Component {
   }
 
   _onBodyResize() {
-    if (this.element) {
+    if (this.element && this.element.offsetWidth) {
       let width = this.element.offsetWidth
       let newFontSize = this._getFontSize(width)
 
