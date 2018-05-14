@@ -74,7 +74,11 @@ class FitText extends React.Component {
       let newFontSize = this._getFontSize(width)
 
       this.setState({
+<<<<<<< HEAD
         fontSize: `${newFontSize}px`,
+=======
+        fontSize: `${this.state.fontSize}px`,
+>>>>>>> cab8b4ae0410e686407543b1d08e968cc25176d3
       })
     }
   }
