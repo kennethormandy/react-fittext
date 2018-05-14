@@ -4,7 +4,6 @@ import test from 'ava'
 import React from 'react'
 import { render, findDOMNode } from 'react-dom'
 import FitText from '../src/FitText'
-import ga from 'react-ga'
 
 test('should exist', t => {
   const container = document.createElement('div')
