@@ -17,8 +17,14 @@ class FitText extends React.Component {
   constructor(props) {
     super(props)
 
+    let defaultFontSize = props.defaultFontSize
+
+    if (typeof props.defaultFontSize === 'number') {
+      defaultFontSize = `${props.defaultFontSize}px`
+    }
+
     this.state = {
-      fontSize: props.defaultFontSize,
+      fontSize: defaultFontSize,
     }
 
     this._onBodyResize = this._onBodyResize.bind(this)
@@ -96,6 +102,7 @@ FitText.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   compressor: PropTypes.number,
   debounce: PropTypes.number,
+  defaultFontSize: PropTypes.string,
   minFontSize: PropTypes.number,
   maxFontSize: PropTypes.number,
 }
