@@ -74,7 +74,7 @@ class FitText extends React.Component {
       let newFontSize = this._getFontSize(width)
 
       this.setState({
-        fontSize: newFontSize,
+        fontSize: `${this.state.fontSize}px`,
       })
     }
   }
@@ -83,7 +83,7 @@ class FitText extends React.Component {
     return (
       <div
         ref={el => (this.element = el)}
-        style={{ fontSize: `${this.state.fontSize}px` }}>
+        style={{ fontSize: this.state.fontSize }}>
         {this.props.children}
       </div>
     )
