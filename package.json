@@ -51,7 +51,7 @@
     "prepublish": "npm run build",
     "start": "webpack-dev-server",
     "lint": "prettier --write './src/*.{js,jsx}'",
-    "test": "ava; npm run build; ./node_modules/.bin/size-limit",
+    "test": "ava; ./node_modules/.bin/size-limit",
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 8081 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o dist/storybook",
