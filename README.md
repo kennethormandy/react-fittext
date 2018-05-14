@@ -1,6 +1,30 @@
 # React FitText
 
-<!-- Discussion around adding this to CSS and why it might not happen: https://github.com/w3c/csswg-drafts/issues/2528 -->
+
+## 
+
+If you want to make specific text fit to a certain sized area, and then maintain that ratio across screen sizes, this component will work for you. If you have more specific requirements, there are some other options you may want to consider.
+
+FitText is a particularly useful approach for:
+
+- Predetermined content (ie. not user generated or dynamic)
+- Text that fits, until it hits a minimum or maximum font size, and then reflows normally from there
+- Multi-line text that fits
+
+If you don’t have any of these requirements, another library might suit you better. Some possible alternatives include:
+
+- Using SVG dynamically with [React FitterHappierText](https://github.com/jxnblk/react-fitter-happier-text) (the changes are all [open as Pull Requests](https://github.com/jxnblk/react-fitter-happier-text/pulls) on [Brent Jackson’s original](https://github.com/jxnblk/react-fitter-happier-text))
+- Using [BigIdeasText](http://github.com/kennethormandy/big-ideas-text) within React lifecycle hooks like  `componentDidMount()`. I may open source a React-specific fork of [Zach Leatherman’s original](https://github.com/zachleat/BigText) in the future.
+
+If you’re curious why some sort of automatic scaling isn’t already possible using CSS alone, or why it might still be a challenge in the future, [read more in this CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2528).
+
+## Differences from existing React FitText
+
+This component is written specifically for React v16 and up, includes tests, and uses state to avoid DOM manipulation.
+
+The existing [React FitText component by @gianu](https://github.com/gianu/react-fittext) should still work with current versions of React, and is stateless, but manipulates the DOM directly to change font sizes.
+
+The former makes more sense to me, but I use this component fairly regularly, and it made sense for me to maintain my old version regardless.
 
 ## Installation
 
