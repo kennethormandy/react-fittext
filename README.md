@@ -1,8 +1,5 @@
 # React FitText
 
-
-## 
-
 If you want to make specific text fit to a certain sized area, and then maintain that ratio across screen sizes, this component will work for you. If you have more specific requirements, there are some other options you may want to consider.
 
 FitText is a particularly useful approach for:

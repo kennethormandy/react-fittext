@@ -59,6 +59,19 @@ if (process.env.NODE_ENV === 'production') {
     },
   }
 } else {
+  config.module.rules.push({
+    test: /\.md$/,
+    use: [
+      {
+        loader: 'html-loader',
+      },
+      {
+        loader: 'markdown-loader',
+        options: {},
+      },
+    ],
+  })
+
   config.entry['dev'] = './dev.js'
   config.output['filename'] = './[name].js'
 }
