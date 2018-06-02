@@ -258,6 +258,17 @@ storiesOf('FitText', module)
               <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
             </div>
           </div>
+          <div style={{ marginBottom: padding }}>
+            <div>break-none, nowrap</div>
+            <div
+              style={{
+                wordBreak: 'break-none',
+                whiteSpace: 'nowrap',
+                border: '1px solid',
+              }}>
+              <FitText compressor={0.666}>Antidisestablishmentarianism</FitText>
+            </div>
+          </div>
         </div>
       )
     })
