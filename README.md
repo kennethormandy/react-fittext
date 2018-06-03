@@ -84,7 +84,7 @@ I’ve used various versions of this project in the following type specimen site
 - [Boomville](http://Boomville.losttype.com)
 - [Tofino v2](http://tofino.losttype.com)
 - [My website](https://kennethormandy.com)
-- TBA
+- [Protipo](https://protipo.type-together.com)
 - TBA
 
 ## Credits
