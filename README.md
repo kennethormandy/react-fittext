@@ -1,12 +1,16 @@
 # React FitText
 
-If you want to make specific text fit to a certain sized area, and then maintain that ratio across screen sizes, this component will work for you. If you have more specific requirements, there are some other options you may want to consider.
+[FitText.js](https://github.com/davatron5000/FitText.js) as a React v16+ component.
+
+If you want to make specific text fit within a specific sized container, and then maintain that ratio across screen sizes, this component is for you.
 
 FitText is a particularly useful approach for:
 
 - Predetermined content (ie. not user generated or dynamic)
 - Text that fits, until it hits a minimum or maximum font size, and then reflows normally from there
 - Multi-line text that fits
+
+## Alternatives
 
 If you don’t have any of these requirements, another library might suit you better. Some possible alternatives include:
 
@@ -15,13 +19,13 @@ If you don’t have any of these requirements, another library might suit you be
 
 If you’re curious why some sort of automatic scaling isn’t already possible using CSS alone, or why it might still be a challenge in the future, [read more in this CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2528).
 
-## Differences from existing React FitText
+## Differences from the existing React FitText
 
 This component is written specifically for React v16 and up, includes tests, and uses state to avoid DOM manipulation.
 
 The existing [React FitText component by @gianu](https://github.com/gianu/react-fittext) should still work with current versions of React, and is stateless, but manipulates the DOM directly to change font sizes.
 
-The former makes more sense to me, but I use this component fairly regularly, and it made sense for me to maintain my old version regardless.
+My approach feels more React appropriate to me—shocking—and I use this component regularly enough that it made sense for me to maintain my own version regardless.
 
 ## Installation
 
@@ -37,9 +41,7 @@ import FitText from '@kennethormandy/react-fittext'
 
 ```jsx
 <FitText>
-  <span>
-    The quick brown fox jumps over the lazy dog
-  </span>
+  The quick brown fox jumps over the lazy dog.
 </FitText>
 ```
 
@@ -48,7 +50,8 @@ With Fragments:
 ```jsx
 <FitText>
   <React.Fragment>
-    The quick brown fox jumps over the lazy dog
+    <h2>Pangram</h2>
+    <p>The quick brown fox jumps over the lazy dog.</p>
   </React.Fragment>
 </FitText>
 ```
@@ -68,7 +71,7 @@ npm start
 
 Now, you can open `http://localhost:8080` and modify `src/dev.js` while working on the project. 
 
-Alternatively, to run the Storybook [stories](http://react-fittext.kennethormandy.com) instead:
+To run the Storybook [stories](http://react-fittext.kennethormandy.com) instead:
 
 ```sh
 npm run storybook
