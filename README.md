@@ -2,20 +2,43 @@
 
 [FitText.js](https://github.com/davatron5000/FitText.js) as a React v16+ component.
 
-If you want to make specific text fit within a specific sized container, and then maintain that ratio across screen sizes, this component is for you.
+If you want to make specific text fit within a container, and then maintain that ratio across screen sizes, this component is for you.
 
 FitText is a particularly useful approach for:
 
 - Predetermined content (ie. not user generated or dynamic)
-- Text that fits, until it hits a minimum or maximum font size, and then reflows normally from there
+- Text that fits within a container until it hits a minimum or maximum font size, and then reflows normally from there
 - Multi-line text that fits
 
 ## Alternatives
 
-If you don’t have any of these requirements, another library might suit you better. Some possible alternatives include:
+If you don’t have any of these requirements, another approach might suit you better. Some possible alternatives include:
 
+- Using a pre-made SVG without outlining the text, if you have predetermined content, and want truly the exact same layout across all viewports
 - Using SVG dynamically with [React FitterHappierText](https://github.com/jxnblk/react-fitter-happier-text) (the changes are all [open as Pull Requests](https://github.com/jxnblk/react-fitter-happier-text/pulls) on [Brent Jackson’s original](https://github.com/jxnblk/react-fitter-happier-text))
 - Using [BigIdeasText](http://github.com/kennethormandy/big-ideas-text) within React lifecycle hooks like  `componentDidMount()`. I may open source a React-specific fork of [Zach Leatherman’s original](https://github.com/zachleat/BigText) in the future.
+- Using Mike Riethmuller’s clever [CSS-only fluid type technique](https://www.madebymike.com.au/writing/precise-control-responsive-typography/) and [other examples](https://www.madebymike.com.au/writing/fluid-type-calc-examples/), if you have some scaling constraints but aren’t concerned about reflow across all sizes
+- Plain viewport units, if the only relevant container is the width (or height) of the page:
+
+  ```html
+  <div class="example">
+    Scale with the viewport
+  </div>
+  ```
+
+  ```css
+  /* Minimum font size */
+  .example { 
+    font-size: 24px;
+  }
+
+  /* Scale linearly after this breakpoint */
+  @media (min-width: 480px) {
+    .example {
+      font-size: 5vw;
+    }
+  }
+  ```
 
 If you’re curious why some sort of automatic scaling isn’t already possible using CSS alone, or why it might still be a challenge in the future, [read more in this CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2528).
 
