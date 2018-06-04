@@ -49,7 +49,7 @@
     "build-js": "NODE_ENV=production webpack -p; babel src/ --out-dir ./lib/",
     "prebuild": "mkdir ./dist; npm run clean;",
     "build": "npm run build-js",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "start": "webpack-dev-server",
     "lint": "prettier --write './src/*.{js,jsx}'",
     "test": "ava; ./node_modules/.bin/size-limit",
