@@ -63,7 +63,7 @@ import FitText from '@kennethormandy/react-fittext'
 ```
 
 ```jsx
-<FitText>
+<FitText compressor={0.5}>
   The quick brown fox jumps over the lazy dog.
 </FitText>
 ```
@@ -72,11 +72,72 @@ With Fragments:
 
 ```jsx
 <FitText>
-  <React.Fragment>
+  <FitText compressor={0.5}>
     <h2>Pangram</h2>
     <p>The quick brown fox jumps over the lazy dog.</p>
   </React.Fragment>
 </FitText>
+```
+
+## Props
+
+### `compressor`
+
+From the original FitText.js documentation:
+
+> If your text is resizing poorly, you'll want to turn tweak up/down “The Compressor.” It works a little like a guitar amp. The default is `1`.
+> —[davatron5000](https://github.com/davatron5000/FitText.js)
+
+```jsx
+<FitText compressor={3}>
+  The quick brown fox jumps over the lazy dog.
+</FitText>
+```
+
+```jsx
+<FitText compressor={1}>
+  The quick brown fox jumps over the lazy dog.
+</FitText>
+```
+
+```jsx
+<FitText compressor={0.3}>
+  The quick brown fox jumps over the lazy dog.
+</FitText>
+```
+
+### `minFontSize` and `maxFontSize`
+
+```jsx
+<FitText compressor={0.5} minFontSize={24} maxFontSize={96}>
+  The quick brown fox jumps over the lazy dog.
+</FitText>
+```
+
+### `defaultFontSize`
+
+React FitText needs the viewport size to determine the size the type, but you might want to provide an explicit fallback when using server-side rendering with React.
+
+```jsx
+<FitText defaultFontSize={100} compressor={0.5}>
+  The quick brown fox
+</FitText>
+```
+
+The default is `inherit`, so typically you will already have a resonable fallback without using this prop, using CSS only. For example:
+
+```css
+.headline {
+  font-size: 6.25rem;
+}
+```
+
+```jsx
+<div className="headline">
+  <FitText compressor={0.5}>
+    The quick brown fox
+  </FitText>
+</div>
 ```
 
 ## Running locally
@@ -111,7 +172,6 @@ I’ve used various versions of this project in the following type specimen site
 - [Tofino v2](http://tofino.losttype.com)
 - [My website](https://kennethormandy.com)
 - [Protipo](https://protipo.type-together.com)
-- TBA
 
 ## Credits
 
