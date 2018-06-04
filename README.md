@@ -68,11 +68,11 @@ import FitText from '@kennethormandy/react-fittext'
 </FitText>
 ```
 
-With Fragments:
+With multiple children:
 
 ```jsx
-<FitText>
-  <FitText compressor={0.5}>
+<FitText compressor={0.5}>
+  <React.Fragment>
     <h2>Pangram</h2>
     <p>The quick brown fox jumps over the lazy dog.</p>
   </React.Fragment>
