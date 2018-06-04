@@ -114,6 +114,18 @@ From the original FitText.js documentation:
 </FitText>
 ```
 
+### `debounce`
+
+Change the included debounce resize timeout. How long should React FitText wait before recalculating the `fontSize`? 
+
+```jsx
+<FitText debounce={3000} compressor={0.5}>
+  The very slow brown fox
+</FitText>
+```
+
+The default is `100` milliseconds.
+
 ### `defaultFontSize`
 
 React FitText needs the viewport size to determine the size the type, but you might want to provide an explicit fallback when using server-side rendering with React.
