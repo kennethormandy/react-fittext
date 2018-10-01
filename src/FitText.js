@@ -59,19 +59,25 @@ class FitText extends React.Component {
     return true
   }
 
-  _getFontSize(width) {
+  _getFontSize(value) {
     const props = this.props
 
     return Math.max(
-      Math.min(width / (props.compressor * 10), props.maxFontSize),
+      Math.min(value / (props.compressor * 10), props.maxFontSize),
       props.minFontSize
     )
   }
 
   _onBodyResize() {
     if (this.element && this.element.offsetWidth) {
-      let width = this.element.offsetWidth
-      let newFontSize = this._getFontSize(width)
+      let value = this.element.offsetWidth
+
+      if (this.props.vertical && this.element.offsetHeight) {
+        value = this.element.parentNode.offsetHeight
+        console.log('value', this.element)
+      }
+
+      let newFontSize = this._getFontSize(value)
 
       this.setState({
         fontSize: `${newFontSize}px`,

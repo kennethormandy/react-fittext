@@ -101,6 +101,45 @@ storiesOf('FitText', module)
     ))
   )
   .add(
+    'with scaling based on vertical height',
+    withInfo(
+      'Scaling within a vertical space, rather than a horizontal space.'
+    )(() => (
+      <div style={{ height: '75vh', outline: '2px dotted silver' }}>
+        <FitText vertical compressor={0.9}>
+          <div>
+            <ul
+              style={{
+                listStyle: 'none',
+                margin: 0,
+                padding: 0,
+                lineHeight: '1.3',
+              }}>
+              {[
+                'Waterfront',
+                'City Centre',
+                'Yaletown',
+                'Olympic Village',
+                'Broadway-City Hall',
+                'King Edward',
+                'Langara-49th',
+              ].map((item, index) => {
+                return (
+                  <li key={`vertical_${index}`} style={{ fontWeight: '100' }}>
+                    {item}{' '}
+                    <span style={{ fontSize: '0.25em', fontWeight: '400' }}>
+                      Check times →
+                    </span>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </FitText>
+      </div>
+    ))
+  )
+  .add(
     'with line breaks',
     withInfo('More info')(() => {
       let style = {
@@ -112,7 +151,9 @@ storiesOf('FitText', module)
         <div>
           <FitText compressor={1.2}>
             <div style={style}>
-              ABCDEFGHIJKLMN<br />OPQRSTUVWXYZ
+              ABCDEFGHIJKLMN
+              <br />
+              OPQRSTUVWXYZ
             </div>
           </FitText>
           <FitText compressor={1.2}>
