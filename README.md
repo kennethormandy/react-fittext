@@ -142,6 +142,28 @@ The default is `inherit`, so typically you will already have a resonable fallbac
 </div>
 ```
 
+## `vertical`
+
+Add the `vertical` prop to scale vertically, rather than horiztonally (the default).
+
+```
+<div style={{ height: '75vh' }}>
+  <FitText vertical compressor={1.25}>
+    <ul>
+      <li>Waterfront</li>
+      <li>Vancouver City Centre</li>
+      <li>Yaletown–Roundhouse</li>
+      <li>Olympic Village</li>
+      <li>Broadway–City Hall</li>
+      <li>King Edward</li>
+      <li>Oakridge–41st Avenue</li>
+      <li>Langara–49th Avenue</li>
+      <li>Marine Drive</li>
+    </ul>
+  </FitText>
+</div>
+```
+
 ## Running locally
 
 ```sh

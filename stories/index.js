@@ -117,12 +117,14 @@ storiesOf('FitText', module)
               }}>
               {[
                 'Waterfront',
-                'City Centre',
-                'Yaletown',
+                'Vancouver City Centre',
+                'Yaletown–Roundhouse',
                 'Olympic Village',
-                'Broadway-City Hall',
+                'Broadway–City Hall',
                 'King Edward',
-                'Langara-49th',
+                'Oakridge–41st Avenue',
+                'Langara–49th Avenue',
+                'Marine Drive',
               ].map((item, index) => {
                 return (
                   <li key={`vertical_${index}`} style={{ fontWeight: '100' }}>
