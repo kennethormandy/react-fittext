@@ -16,29 +16,29 @@ If you don’t have any of these requirements, another approach might suit you b
 
 - Using a pre-made SVG without outlining the text, if you have predetermined content, and want truly the exact same layout across all viewports
 - Using SVG dynamically with [React FitterHappierText](https://github.com/jxnblk/react-fitter-happier-text) (the changes are all [open as Pull Requests](https://github.com/jxnblk/react-fitter-happier-text/pulls) on [Brent Jackson’s original](https://github.com/jxnblk/react-fitter-happier-text))
-- Using [BigIdeasText](http://github.com/kennethormandy/big-ideas-text) within React lifecycle hooks like  `componentDidMount()`. I may open source a React-specific fork of [Zach Leatherman’s original](https://github.com/zachleat/BigText) in the future.
+- Using [BigIdeasText](http://github.com/kennethormandy/big-ideas-text) within React lifecycle hooks like `componentDidMount()`. I may open source a React-specific fork of [Zach Leatherman’s original](https://github.com/zachleat/BigText) in the future.
 - Using Mike Riethmuller’s clever [CSS-only fluid type technique](https://www.madebymike.com.au/writing/precise-control-responsive-typography/) and [other examples](https://www.madebymike.com.au/writing/fluid-type-calc-examples/), if you have some scaling constraints but aren’t concerned about reflow across all sizes
 - Plain viewport units, if the only relevant container is the width (or height) of the page:
 
-  ```html
-  <div class="example">
-    Scale with the viewport
-  </div>
-  ```
+```html
+<div class="example">
+  Scale with the viewport
+</div>
+```
 
-  ```css
-  /* Minimum font size */
-  .example { 
-    font-size: 24px;
-  }
+```css
+/* Minimum font size */
+.example {
+  font-size: 24px;
+}
 
-  /* Scale linearly after this breakpoint */
-  @media (min-width: 480px) {
-    .example {
-      font-size: 5vw;
-    }
+/* Scale linearly after this breakpoint */
+@media (min-width: 480px) {
+  .example {
+    font-size: 5vw;
   }
-  ```
+}
+```
 
 If you’re curious why some sort of automatic scaling isn’t already possible using CSS alone, or why it might still be a challenge in the future, [read more in this CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2528).
 
@@ -63,9 +63,7 @@ import FitText from '@kennethormandy/react-fittext'
 ```
 
 ```jsx
-<FitText compressor={0.5}>
-  The quick brown fox jumps over the lazy dog.
-</FitText>
+<FitText compressor={0.5}>The quick brown fox jumps over the lazy dog.</FitText>
 ```
 
 With multiple children:
@@ -74,7 +72,7 @@ With multiple children:
 <FitText compressor={0.5}>
   <React.Fragment>
     <h2>Pangram</h2>
-    <p>The quick brown fox jumps over the lazy dog.</p>
+    <p>The quick brown fox jumps over the lazy dog</p>
   </React.Fragment>
 </FitText>
 ```
@@ -89,21 +87,15 @@ From the original FitText.js documentation:
 > —[davatron5000](https://github.com/davatron5000/FitText.js)
 
 ```jsx
-<FitText compressor={3}>
-  The quick brown fox jumps over the lazy dog.
-</FitText>
+<FitText compressor={3}>The quick brown fox jumps over the lazy dog.</FitText>
 ```
 
 ```jsx
-<FitText compressor={1}>
-  The quick brown fox jumps over the lazy dog.
-</FitText>
+<FitText compressor={1}>The quick brown fox jumps over the lazy dog.</FitText>
 ```
 
 ```jsx
-<FitText compressor={0.3}>
-  The quick brown fox jumps over the lazy dog.
-</FitText>
+<FitText compressor={0.3}>The quick brown fox jumps over the lazy dog.</FitText>
 ```
 
 ### `minFontSize` and `maxFontSize`
@@ -116,7 +108,7 @@ From the original FitText.js documentation:
 
 ### `debounce`
 
-Change the included debounce resize timeout. How long should React FitText wait before recalculating the `fontSize`? 
+Change the included debounce resize timeout. How long should React FitText wait before recalculating the `fontSize`?
 
 ```jsx
 <FitText debounce={3000} compressor={0.5}>
@@ -146,9 +138,7 @@ The default is `inherit`, so typically you will already have a resonable fallbac
 
 ```jsx
 <div className="headline">
-  <FitText compressor={0.5}>
-    The quick brown fox
-  </FitText>
+  <FitText compressor={0.5}>The quick brown fox</FitText>
 </div>
 ```
 
@@ -165,7 +155,7 @@ npm install
 npm start
 ```
 
-Now, you can open `http://localhost:8080` and modify `src/dev.js` while working on the project. 
+Now, you can open `http://localhost:8080` and modify `src/dev.js` while working on the project.
 
 To run the Storybook [stories](http://react-fittext.kennethormandy.com) instead:
 
@@ -187,8 +177,8 @@ I’ve used various versions of this project in the following type specimen site
 
 ## Credits
 
-* The original [FitText.js](https://github.com/davatron5000/FitText.js) by [@davatron5000](https://github.com/davatron5000/FitText.js)
-* [react-fittext](https://github.com/gianu/react-fittext) by [@gianu](https://github.com/gianu)
+- The original [FitText.js](https://github.com/davatron5000/FitText.js) by [@davatron5000](https://github.com/davatron5000/FitText.js)
+- [react-fittext](https://github.com/gianu/react-fittext) by [@gianu](https://github.com/gianu)
 
 ## License
 
