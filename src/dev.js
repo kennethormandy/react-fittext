@@ -55,7 +55,10 @@ class SizeWrapper extends React.Component {
     return (
       <div>
         <label>
-          <strong>Wrapper Size ({state.wrapperWidth}%)</strong>
+          <strong>
+            Wrapper Size ({state.wrapperWidth}
+            %)
+          </strong>
           <input
             type="range"
             min={0}
