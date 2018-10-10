@@ -106,7 +106,7 @@ storiesOf('FitText', module)
       'Scaling within a vertical space, rather than a horizontal space.'
     )(() => (
       <div style={{ height: '75vh', outline: '2px dotted silver' }}>
-        <FitText vertical compressor={0.9}>
+        <FitText vertical compressor={1.15}>
           <div>
             <ul
               style={{
