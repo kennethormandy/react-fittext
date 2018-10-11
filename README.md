@@ -146,7 +146,7 @@ The default is `inherit`, so typically you will already have a resonable fallbac
 
 Add the `vertical` prop to scale vertically, rather than horiztonally (the default).
 
-```
+```jsx
 <div style={{ height: '75vh' }}>
   <FitText vertical compressor={1.25}>
     <ul>
@@ -160,6 +160,31 @@ Add the `vertical` prop to scale vertically, rather than horiztonally (the defau
       <li>Langara–49th Avenue</li>
       <li>Marine Drive</li>
     </ul>
+  </FitText>
+</div>
+```
+
+## `parent`
+
+Use a different parent, other than the immediate `parentNode`, to calculate the vertical height.
+
+```jsx
+<div id="js-example">
+  <AnotherThing>
+    <FitText vertical parent="js-example">
+      {dynamicChildren}
+    </FitText>
+  </AnotherThing>
+</div>
+```
+
+```jsx
+<div>
+  <div style={{ height: '1000px' }} ref={el => (this.parentNode = el)}>
+    <h1>A contrived example!</h1>
+  </div>
+  <FitText vertical parent={this.parentNode}>
+    {dynamicChildren}
   </FitText>
 </div>
 ```
