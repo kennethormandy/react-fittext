@@ -74,7 +74,6 @@ class FitText extends React.Component {
 
       if (this.props.vertical && this.element.offsetHeight) {
         value = this.element.parentNode.offsetHeight
-        console.log('value', this.element)
       }
 
       let newFontSize = this._getFontSize(value)
