@@ -28,11 +28,27 @@ class FitText extends React.Component {
     }
 
     this._onBodyResize = this._onBodyResize.bind(this)
+    this._parentNode = null
+  }
+
+  componentDidUpdate(prevProps) {
+    // When a new parent ID is passed in, or the new parentNode
+    // is available, run resize again
+    if (this.props.parent !== prevProps.parent) {
+      this._onBodyResize()
+    }
   }
 
   componentDidMount() {
     if (0 >= this.props.compressor) {
       console.warn(`Warning: The compressor should be greater than 0.`)
+    }
+
+    if (this.props.parent) {
+      this._parentNode =
+        typeof this.props.parent === 'string'
+          ? document.getElementById(this.props.parent)
+          : this.props.parent
     }
 
     window.addEventListener(
@@ -72,8 +88,9 @@ class FitText extends React.Component {
     if (this.element && this.element.offsetWidth) {
       let value = this.element.offsetWidth
 
-      if (this.props.vertical && this.element.offsetHeight) {
-        value = this.element.parentNode.offsetHeight
+      if (this.props.vertical) {
+        let parent = this._parentNode || this.element.parentNode
+        value = parent.offsetHeight
       }
 
       let newFontSize = this._getFontSize(value)
@@ -110,6 +127,7 @@ FitText.propTypes = {
   defaultFontSize: PropTypes.string,
   minFontSize: PropTypes.number,
   maxFontSize: PropTypes.number,
+  parent: PropTypes.oneOf(['string', 'object']),
 }
 
 export default FitText
