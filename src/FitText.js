@@ -1,5 +1,5 @@
 /*
- * React FitText v0.2.0
+ * React FitText
  * https://github.com/kennethormandy/react-fittext
  * Kenneth Ormandy
  * 
