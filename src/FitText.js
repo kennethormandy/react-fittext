@@ -127,7 +127,7 @@ FitText.propTypes = {
   defaultFontSize: PropTypes.string,
   minFontSize: PropTypes.number,
   maxFontSize: PropTypes.number,
-  parent: PropTypes.oneOf(['string', 'object']),
+  parent: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 export default FitText
