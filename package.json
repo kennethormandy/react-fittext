@@ -3,6 +3,8 @@
   "version": "0.5.1",
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "main": "./lib/FitText.js",
+  "repository": "https://github.com/kennethormandy/react-fittext",
+  "license": "MIT",
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.1"
