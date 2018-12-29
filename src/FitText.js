@@ -65,16 +65,6 @@ class FitText extends React.Component {
     )
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    // If the new fontSize is the same as the old one,
-    // don’t bother re-rendering.
-    if (nextState.fontSize === this.state.fontSize) {
-      return false
-    }
-
-    return true
-  }
-
   _getFontSize(value) {
     const props = this.props
 
