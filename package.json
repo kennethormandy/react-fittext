@@ -1,6 +1,6 @@
 {
   "name": "@kennethormandy/react-fittext",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "main": "./lib/FitText.js",
   "repository": "https://github.com/kennethormandy/react-fittext",
