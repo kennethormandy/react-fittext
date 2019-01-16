@@ -48,7 +48,7 @@ This component is written specifically for React v16 and up, includes tests, and
 
 The existing [React FitText component by @gianu](https://github.com/gianu/react-fittext) should still work with current versions of React, and is stateless, but manipulates the DOM directly to change font sizes.
 
-My approach feels more React appropriate to me—shocking—and I use this component regularly enough that it made sense for me to maintain my own version regardless.
+The approach I’m using feels more React-appropriate, at least to me. I use this component regularly enough that it made sense for me to maintain my own version regardless.
 
 ## Installation
 
@@ -212,15 +212,17 @@ npm run storybook
 
 ## Samples
 
-I’ve used various versions of this project in the following type specimen sites:
+I’ve used various versions of this project in the following [type specimen sites](https://kennethormandy.com/type-specimen-sites/):
 
 - [Regina Black](http://regina-black.losttype.com)
-- [DDC Hardware](http://ddc-hardware.losttype.com)
-- [Google Fonts + Japanese Early Access](https://googlefonts.github.io/japanese)
-- [Boomville](http://Boomville.losttype.com)
+- [DDC Hardware](https://kennethormandy.com/portfolio/ddc-hardware-type-specimen-site/)
+- [Google Fonts + Japanese collection](https://googlefonts.github.io/japanese)
+- [Boomville](http://boomville.losttype.com)
 - [Tofino v2](http://tofino.losttype.com)
 - [My website](https://kennethormandy.com)
 - [Protipo](https://protipo.type-together.com)
+- TBA
+- TBA
 
 ## Credits
 
@@ -232,4 +234,4 @@ I’ve used various versions of this project in the following type specimen site
 [The MIT License (MIT)](LICENSE.md)
 
 Copyright © 2014 [Sergio Rafael Gianazza](https://github.com/gianu/react-fittext/blob/master/LICENSE)<br/>
-Copyright © 2017–2018 [Kenneth Ormandy Inc.](http://kennethormandy.com)
+Copyright © 2017–2019 [Kenneth Ormandy Inc.](https://kennethormandy.com)
