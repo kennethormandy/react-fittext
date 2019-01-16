@@ -37,7 +37,6 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "size-limit": "^0.11.6",
-    "surge": "0.19.0",
     "webpack": "2.4.1",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "2.8.2"
@@ -58,7 +57,7 @@
     "posttest": "npm run lint",
     "storybook": "start-storybook -p 8081 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o dist/storybook",
-    "deploy-storybook": "npm run build-storybook; ./node_modules/.bin/surge ./dist/storybook react-fittext.kennethormandy.com"
+    "deploy-storybook": "npm run build-storybook; npx surge ./dist/storybook react-fittext.kennethormandy.com"
   },
   "prettier": {
     "semi": false,
