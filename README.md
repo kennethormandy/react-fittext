@@ -144,7 +144,7 @@ The default is `inherit`, so typically you will already have a resonable fallbac
 
 ## `vertical`
 
-Add the `vertical` prop to scale vertically, rather than horiztonally (the default).
+Add the `vertical` prop to scale vertically, rather than horizontally (the default).
 
 ```jsx
 <div style={{ height: '75vh' }}>
