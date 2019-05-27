@@ -224,6 +224,11 @@ I’ve used various versions of this project in the following [type specimen sit
 - TBA
 - TBA
 
+Other projects:
+
+- [Cygnus Design Group](https://www.cygnus.group/) (added vertical support)
+- Your project? [Add it to the README](https://github.com/kennethormandy/react-fittext/edit/master/README.md)
+
 ## Credits
 
 - The original [FitText.js](https://github.com/davatron5000/FitText.js) by [@davatron5000](https://github.com/davatron5000/FitText.js)
