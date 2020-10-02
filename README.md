@@ -1,4 +1,4 @@
-# React FitText
+# React FitsText
 
 [FitText.js](https://github.com/davatron5000/FitText.js) as a React v16+ component.
 
