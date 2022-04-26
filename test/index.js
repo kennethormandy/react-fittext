@@ -1,4 +1,4 @@
-// Testing config MIT via https://git.io/vXCGg
+// Testing config MIT via https://github.com/vercel/react-keyframes/blob/main/test/index.js
 
 import test from 'ava'
 import React from 'react'
